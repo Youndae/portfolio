@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="th/layout/header">
+<head>
+    <meta charset="UTF-8">
+    <title>포트폴리오</title>
+    <script type="text/javascript" th:src="@{/js/portfolio.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+
+
+<div layout:fragment="content">
+    <header class="masthead text-white text-center main_header">
+        <div class="container d-flex align-items-center flex-column">
+            <h1 class="masthead-heading text-uppercase fs-1 mb-0">백엔드 신입 개발자 남윤대의 포트폴리오 입니다.</h1>
+        </div>
+    </header>
+    <!-- About Section-->
+    <section class="page-section bg-primary text-white mb-0" id="about">
+        <div class="container">
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-light">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- About Section Content-->
+            <div class="row">
+                <div class="col-lg-12 ms-auto text-center">
+                    <p class="lead">
+                        안녕하세요. 백엔드 신입 개발자 남윤대입니다.<br>
+                        꼼꼼하고 적극적인것이 저의 장점입니다.<br>
+                        더 많은것을 배우고 경험해 능력있는 개발자가 되고싶으며<br>
+                        최종적으로는 풀스택 개발자가 되는것이 목표입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- skill -->
+    <section class="page-section portfolio" id="skill">
+        <!-- java, javascript, html, css, jsp, mysql, oracle, spring, jquery-->
+        <div class="container">
+            <!-- skill Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Skill</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- skill Grid Items-->
+            <div class="row justify-content-center">
+                <!-- skill Item 1-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto">
+                        <img class="img-fluid img_skill" src="/img/java.png"/>
+                    </div>
+                </div>
+                <!-- skill Item 2-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto">
+                        <img class="img-fluid img_skill" src="/img/spring.png"/>
+                    </div>
+                </div>
+                <!-- skill Item 3-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto">
+                        <img class="img-fluid img_skill" src="/img/js.png"/>
+                    </div>
+                </div>
+                <!-- skill Item 4-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto">
+                        <img class="img-fluid img_skill" src="/img/jQuery.png"/>
+                    </div>
+                </div>
+                <!-- skill Item 5-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto">
+                        <img class="img-fluid img_skill" src="/img/Servlet&JSP.png"/>
+                    </div>
+                </div>
+                <!-- skill Item 6-->
+                <div class="col-md-6 col-lg-4 mb-5">
+                    <div class="portfolio-item mx-auto">
+                        <img class="img-fluid img_skill" src="/img/html5.png"/>
+                    </div>
+                </div>
+                <!-- skill Item 7-->
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <div class="portfolio-item mx-auto">
+                        <img class="img-fluid img_skill" src="/img/css.png"/>
+                    </div>
+                </div>
+                <!-- skill Item 8-->
+                <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                    <div class="portfolio-item mx-auto">
+                        <img class="img-fluid img_skill" src="/img/mysql.png"/>
+                    </div>
+                </div>
+                <!-- skill Item 9-->
+                <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
+                    <div class="portfolio-item mx-auto">
+                        <img class="img-fluid img_skill" src="/img/oracle.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Archive -->
+    <section class="page-section portfolio" id="archive">
+        <div class="container">
+            <!-- Archive Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Archive</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Archive Grid Items-->
+            <div class="row justify-content-center">
+                <!-- Archive Item 1-->
+                <div class="col-md-5 col-lg-5 mb-5">
+                    <div class="portfolio-item mx-auto">
+                        <div class="archive-item-caption d-flex align-items-center justify-content-center h-100 w-100"  th:name="ar_git">
+                            <div class="archive-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x">GitHub</i></div>
+                        </div>
+                        <img class="img-fluid" name="git" src="/img/github.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Archive Item 2-->
+                <div class="col-md-5 col-lg-5 mb-5">
+                    <div class="portfolio-item mx-auto">
+                        <div class="archive-item-caption d-flex align-items-center justify-content-center h-100 w-100" th:name="ar_blog">
+                            <div class="archive-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x">Blog</i></div>
+                        </div>
+                        <img class="img-fluid" name="blog" src="/img/blog.png" alt="..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- portfolio -->
+    <section class="page-section portfolio" id="portfolio">
+        <div class="container">
+            <!-- Portfolio Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                <div class="divider-custom-line"></div>
+            </div>
+            <!-- Portfolio Grid Items-->
+            <div class="row justify-content-center" id="portTest">
+                <!-- Portfolio Item 1-->
+                <div class="col-md-5 col-lg-6 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" th:name="1">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x">man's Shop</i></div>
+                        </div>
+                        <img class="img-fluid" src="/img/mansShop.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 2-->
+                <div class="col-md-5 col-lg-6 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" th:name="2">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x">Board Project</i></div>
+                        </div>
+                        <img class="img-fluid" src="/img/BoardProject.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 3-->
+                <div class="col-md-5 col-lg-6 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" th:name="3">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x">니가사는그집</i></div>
+                        </div>
+                        <img class="img-fluid" src="/img/thehouse.png" alt="..." />
+                    </div>
+                </div>
+                <!-- Portfolio Item 4-->
+                <div class="col-md-5 col-lg-6 mb-5">
+                    <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100" th:name="4">
+                            <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x">Bit Library</i></div>
+                        </div>
+                        <img class="img-fluid" src="/img/library.png" alt="..." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                <div class="modal-body text-center pb-5">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"></h2>
+                                <!-- Icon Divider-->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <div class="portfolio-modal-content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

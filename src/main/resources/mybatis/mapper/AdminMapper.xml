@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.portfolio.mapper.AdminMapper">
+
+    <select id="contentInfo" resultType="com.portfolio.VO.AdminVO">
+        select *
+        from portcontent
+        where bno=1
+    </select>
+
+    <insert id="insertProc" parameterType="com.portfolio.VO.AdminVO">
+        INSERT INTO portcontent(
+            title
+            , con
+        )
+        VALUES(
+            #{title}
+            , #{con}
+        )
+    </insert>
+
+    <select id="modifyPort" resultType="com.portfolio.VO.AdminVO">
+        SELECT *
+        FROM
+            portcontent
+        WHERE
+            bno = #{bno}
+    </select>
+
+    <update id="modifyProc" parameterType="com.portfolio.VO.AdminVO">
+        UPDATE portcontent
+        SET
+            title = #{title}
+            , con = #{con}
+        WHERE
+            bno = #{bno}
+    </update>
+
+    <delete id="deleteProc" parameterType="int">
+        DELETE FROM portcontent
+        WHERE
+            bno=#{bno}
+    </delete>
+
+    <resultMap id="memberMap" type="com.portfolio.VO.MemberVO">
+        <id property="userId" column="userId"/>
+        <result property="userId" column="userId"/>
+        <result property="userPw" column="userPw"/>
+        <collection property="authList" resultMap="authMap"/>
+    </resultMap>
+
+    <resultMap id="authMap" type="com.portfolio.VO.AuthVO">
+        <result property="userId" column="userId"/>
+        <result property="auth" column="auth"/>
+    </resultMap>
+
+    <select id="getUserInfo" resultMap="memberMap">
+        SELECT
+            mem.userId
+            , mem.userPw
+            , auth
+        FROM
+            member mem
+            LEFT OUTER JOIN
+            user_auth auth
+            ON
+            mem.userId = auth.userId
+        WHERE
+            mem.userId = #{userId}
+    </select>
+
+
+    <select id="portfolioDetail" resultType="com.portfolio.VO.AdminVO">
+        SELECT *
+        FROM
+            portcontent
+        WHERE
+            bno=#{bno}
+    </select>
+
+</mapper>
